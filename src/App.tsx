@@ -17,9 +17,9 @@ export const App: FC<Props> = ({ onChange }) => {
 
   return (
     <>
-      <div className='flex container mx-auto w-1/2 h-screen'>
-        <div className='flex container items-start h-4/5 bg-white rounded-md'>
-          <div className='flex container justify-between h-12 border-blue-600 border-solid place-items-center font-bold cursor-pointer bg-slate-300 rounded-md mx-auto text-black items-center p-4'>
+      <div className='flex container mx-auto w-1/2'>
+        <div className='flex container items-start h-1/5 bg-white rounded-md rounded-b-none'>
+          <div className='flex container justify-between h-12 border-blue-600 border-solid place-items-center font-bold cursor-pointer bg-slate-300 rounded-md rounded-b-none mx-auto text-black items-center p-4'>
             {...contents.map((content, index) => (
               <>
                 <div
@@ -31,18 +31,15 @@ export const App: FC<Props> = ({ onChange }) => {
                 >
                   {content.text}
                 </div>
-                <div className='flex-none text-white'>
-                  {selectedTabText}
-                </div>
               </>
             ))}
           </div>
-          <div className='font-bold h-10 text-black rounded-md'>
-          </div>
-
-
         </div>
       </div>
+      <div className='flex justify-center container w-1/2 font-bold mx-auto items-center h-80 text-black rounded-md rounded-t-none bg-white text-center text-7xl'>
+        {selectedTabText}
+      </div>
+
 
     </>
   )
